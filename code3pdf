@@ -29,7 +29,7 @@ install_arch_packages() {
     for package in $packages; do
         if ! pacman -Q "$package" > /dev/null 2>&1; then
             echo "Installing $package..."
-            sudo pacman -Syu --noconfirm "$package"
+            sudo pacman -Sy --noconfirm "$package"
         fi
     done
 }
